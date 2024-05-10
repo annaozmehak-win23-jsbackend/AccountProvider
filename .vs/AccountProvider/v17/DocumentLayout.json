@@ -1,12 +1,54 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Anna\\Documents\\Repos\\AccountProvider\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{06C96C20-DEB4-4499-AA64-9A26E9BF9702}|AccountProvider\\AccountProvider.csproj|c:\\users\\anna\\documents\\repos\\accountprovider\\accountprovider\\functions\\verify.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06C96C20-DEB4-4499-AA64-9A26E9BF9702}|AccountProvider\\AccountProvider.csproj|solutionrelative:accountprovider\\functions\\verify.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06C96C20-DEB4-4499-AA64-9A26E9BF9702}|AccountProvider\\AccountProvider.csproj|c:\\users\\anna\\documents\\repos\\accountprovider\\accountprovider\\functions\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06C96C20-DEB4-4499-AA64-9A26E9BF9702}|AccountProvider\\AccountProvider.csproj|solutionrelative:accountprovider\\functions\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 190,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Verify.cs",
+              "DocumentMoniker": "C:\\Users\\Anna\\Documents\\Repos\\AccountProvider\\AccountProvider\\Functions\\Verify.cs",
+              "RelativeDocumentMoniker": "AccountProvider\\Functions\\Verify.cs",
+              "ToolTip": "C:\\Users\\Anna\\Documents\\Repos\\AccountProvider\\AccountProvider\\Functions\\Verify.cs",
+              "RelativeToolTip": "AccountProvider\\Functions\\Verify.cs",
+              "ViewState": "AQIAACcAAAAAAAAAAAAgwDgAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-10T13:43:27.083Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SignUp.cs",
+              "DocumentMoniker": "C:\\Users\\Anna\\Documents\\Repos\\AccountProvider\\AccountProvider\\Functions\\SignUp.cs",
+              "RelativeDocumentMoniker": "AccountProvider\\Functions\\SignUp.cs",
+              "ToolTip": "C:\\Users\\Anna\\Documents\\Repos\\AccountProvider\\AccountProvider\\Functions\\SignUp.cs",
+              "RelativeToolTip": "AccountProvider\\Functions\\SignUp.cs",
+              "ViewState": "AQIAACwAAAAAAAAAAAAgwEIAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-10T13:35:08.866Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

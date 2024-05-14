@@ -47,8 +47,7 @@
               "DocumentMoniker": "ViewDataWindow_MSSQL__/sqldatabase_silicon_win23_annaozmehak.database.windows.net/silicon_database/SqlAdmin/SqlTable/dbo.AspNetUsers.sql",
               "ToolTip": "dbo.AspNetUsers [Data]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2024-05-14T15:03:01.782Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-14T15:03:01.782Z"
             },
             {
               "$type": "Document",
@@ -60,8 +59,7 @@
               "RelativeToolTip": "AccountProvider\\Functions\\SignUp.cs",
               "ViewState": "AQIAACwAAAAAAAAAAAAkwDMAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-14T10:42:57.759Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-14T10:42:57.759Z"
             },
             {
               "$type": "Document",

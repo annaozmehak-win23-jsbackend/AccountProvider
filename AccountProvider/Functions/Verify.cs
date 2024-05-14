@@ -48,28 +48,11 @@ public class Verify(ILogger<Verify> logger, UserManager<UserAccount> userManager
                 // verify code using VerificationProvider
                 try
                 {
-                    //dessa tre rader borde sta inuti i en try
                     using var http = new HttpClient();
                     StringContent content = new StringContent(JsonConvert.SerializeObject(vr), Encoding.UTF8, "application/json");
-                    //var response = await http.PostAsync("https://verificationprovider.silicon.azurewebsite.net/api/verify", content);
+                    var response = await http.PostAsync("https://verificationprovider-silicon-win23-annaozmehak.azurewebsites.net/api/validate?code=XbTRZ5D2gwKytzdFQDx_-mr4Jbjuoi4e8_bsJXkfpQpyAzFuDiiqvg==", content);
 
-                    //if (response.IsSuccessStatusCode)
-                    //{
-                    //    var userAccount = await _userManager.FindByEmailAsync(vr.Email);
-                    //    if (userAccount != null)
-                    //    {
-                    //        userAccount.EmailConfirmed = true;
-                    //        await _userManager.UpdateAsync(userAccount);
-
-                    //        if (await _userManager.IsEmailConfirmedAsync(userAccount))
-                    //        {
-                    //            return new OkResult();
-                    //        }
-                    //    }
-                    //}
-
-                    //simulated, remove true on real connection like above
-                    if (true)
+                    if (response.IsSuccessStatusCode)
                     {
                         var userAccount = await _userManager.FindByEmailAsync(vr.Email);
                         if (userAccount != null)
@@ -83,6 +66,22 @@ public class Verify(ILogger<Verify> logger, UserManager<UserAccount> userManager
                             }
                         }
                     }
+
+                    //simulated, remove true on real connection like above
+                    //if (true)
+                    //{
+                    //    var userAccount = await _userManager.FindByEmailAsync(vr.Email);
+                    //    if (userAccount != null)
+                    //    {
+                    //        userAccount.EmailConfirmed = true;
+                    //        await _userManager.UpdateAsync(userAccount);
+
+                    //        if (await _userManager.IsEmailConfirmedAsync(userAccount))
+                    //        {
+                    //            return new OkResult();
+                    //        }
+                    //    }
+                    //}
                 }
                 catch (Exception ex)
                 {

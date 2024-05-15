@@ -72,7 +72,7 @@ public class SignUp(ILogger<SignUp> logger, UserManager<UserAccount> userManager
                                 //StringContent content = new StringContent(JsonConvert.SerializeObject(new { Email = userAccount.Email }), Encoding.UTF8, "application/json");
                                 //var response = await http.PostAsync("", content);
 
-                                var serviceBusConnectionString = Environment.GetEnvironmentVariable("ServiceBusConnectionString");
+                                var serviceBusConnectionString = "Endpoint=sb://sb-silicon-win23-annaozmehak.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=t3USlYZoojKBP172dDzRgkd5FFyD5z0i6+ASbEZykFY=";
                                 var queueName = "verfication_request";
                                 var client = new ServiceBusClient(serviceBusConnectionString);
                                 var sender = client.CreateSender(queueName);

@@ -1,5 +1,4 @@
 using AccountProvider.Models;
-using Azure.Messaging.ServiceBus;
 using Data.Entities;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
@@ -10,100 +9,89 @@ using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using System.Text;
 
-
-namespace AccountProvider.Functions;
-
-public class SignUp(ILogger<SignUp> logger, UserManager<UserAccount> userManager)
+namespace AccountProvider.Functions
 {
-    private readonly ILogger<SignUp> _logger = logger;
-    private readonly UserManager<UserAccount> _userManager = userManager;
-
-
-    [Function("SignUp")]
-    public async Task<IActionResult> Run([HttpTrigger(AuthorizationLevel.Function, "post")] HttpRequest req)
+    public class SignUp(ILogger<SignUp> logger, UserManager<UserAccount> userManager)
     {
-        string body = null!;
+        private readonly ILogger<SignUp> _logger = logger;
+        private readonly UserManager<UserAccount> _userManager = userManager;
 
-        try
-        {
-            body = await new StreamReader(req.Body).ReadToEndAsync();
-        }
-        catch (Exception ex)
-        {
-            _logger.LogError($"StreamReader :: {ex.Message}");
-        }
 
-        if (body != null)
+        [Function("SignUp")]
+        public async Task<IActionResult> Run([HttpTrigger(AuthorizationLevel.Function, "post")] HttpRequest req)
         {
-            UserRegistrationRequest urr = null!;
+            string body = null!;
 
             try
             {
-                urr = JsonConvert.DeserializeObject<UserRegistrationRequest>(body)!;
+                body = await new StreamReader(req.Body).ReadToEndAsync();
             }
             catch (Exception ex)
             {
-                _logger.LogError($"JsonConvert.DeserializeObject<UserRegistrationRequest> :: {ex.Message}");
+                _logger.LogError($"StreamReader :: {ex.Message}");
             }
 
-            if (urr != null && !string.IsNullOrEmpty(urr.Email) && !string.IsNullOrEmpty(urr.Password))
+            if (body != null)
             {
-                if (!await _userManager.Users.AnyAsync(x => x.Email == urr.Email))
+                UserRegistrationRequest urr = null!;
+
+                try
                 {
-                    var userAccount = new UserAccount
-                    {
-                        FirstName = urr.FirstName,
-                        LastName = urr.LastName,
-                        Email = urr.Email,
-                        UserName = urr.Email
-                    };
-
-                    try
-                    {
-                        var result = await _userManager.CreateAsync(userAccount, urr.Password);
-                        if (result.Succeeded)
-                        {
-                            // send verification code
-                            //change so it works with my verificationprovider
-                            //om du vill kora det som en HTTP REQUEST - kraver att vi vantar pa svar tillbaka
-                            try
-                            {
-                                //using var http = new HttpClient();
-                                //StringContent content = new StringContent(JsonConvert.SerializeObject(new { Email = userAccount.Email }), Encoding.UTF8, "application/json");
-                                //var response = await http.PostAsync("", content);
-
-                                var serviceBusConnectionString = "Endpoint=sb://sb-silicon-win23-annaozmehak.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=t3USlYZoojKBP172dDzRgkd5FFyD5z0i6+ASbEZykFY=";
-                                var queueName = "verfication_request";
-                                var client = new ServiceBusClient(serviceBusConnectionString);
-                                var sender = client.CreateSender(queueName);
-
-                                var messageBody = new { Email = userAccount.Email };
-                                var messageBodyJson = JsonConvert.SerializeObject(messageBody);
-                                var message = new ServiceBusMessage(messageBodyJson);
-
-                                await sender.SendMessageAsync(message);
-                            }
-                            catch (Exception ex)
-                            {
-                                _logger.LogError($"http.PostAsync :: {ex.Message}");
-                            }
-
-                            return new OkResult();
-                        }
-                    }
-                    catch (Exception ex)
-                    {
-                        _logger.LogError($"_userManager.CreateAsync :: {ex.Message}");
-                    }
-
+                    urr = JsonConvert.DeserializeObject<UserRegistrationRequest>(body)!;
                 }
-                else
+                catch (Exception ex)
                 {
-                    return new ConflictResult();
+                    _logger.LogError($"JsonConvert.DeserializeObject<UserRegistrationRequest> :: {ex.Message}");
+                }
+
+                if (urr != null && !string.IsNullOrEmpty(urr.Email) && !string.IsNullOrEmpty(urr.Password))
+                {
+                    if (!await _userManager.Users.AnyAsync(x => x.Email == urr.Email))
+                    {
+                        var userAccount = new UserAccount
+                        {
+                            FirstName = urr.Email,
+                            LastName = urr.Password,
+                            Email = urr.Email,
+                            UserName = urr.Email
+                        };
+
+                        try
+                        {
+                            var result = await _userManager.CreateAsync(userAccount, urr.Password);
+                            if (result.Succeeded)
+                            {
+                                // send verification code
+                                //change so it works with my verificationprovider
+                                //om du vill kora det som en HTTP REQUEST - kraver att vi vantar pa svar tillbaka
+                                try
+                                {
+                                    using var http = new HttpClient();
+                                    StringContent content = new StringContent(JsonConvert.SerializeObject(new { Email = userAccount.Email }), Encoding.UTF8, "application/json");
+                                    var response = await http.PostAsync("https://verificationprovider.silicon.azurewebsite.net/api/GenerateVerificationCode", content);
+                                }
+                                catch (Exception ex)
+                                {
+                                    _logger.LogError($"http.PostAsync :: {ex.Message}");
+                                }
+
+                                return new OkResult();
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            _logger.LogError($"_userManager.CreateAsync :: {ex.Message}");
+                        }
+
+                    }
+                    else
+                    {
+                        return new ConflictResult();
+                    }
                 }
             }
-        }
 
-        return new BadRequestResult();
+            return new BadRequestResult();
+        }
     }
 }

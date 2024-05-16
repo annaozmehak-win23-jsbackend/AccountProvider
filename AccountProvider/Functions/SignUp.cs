@@ -12,11 +12,11 @@ using System.Text;
 
 namespace AccountProvider.Functions
 {
-    public class SignUp(ILogger<SignUp> logger, UserManager<UserAccount> userManager, ServiceBusClient serviceBusClient)
+    public class SignUp(ILogger<SignUp> logger, UserManager<UserAccount> userManager)
     {
         private readonly ILogger<SignUp> _logger = logger;
         private readonly UserManager<UserAccount> _userManager = userManager;
-        private readonly ServiceBusClient _serviceBusClient = serviceBusClient;
+        //private readonly ServiceBusClient _serviceBusClient = serviceBusClient;
 
 
         [Function("SignUp")]
@@ -66,22 +66,22 @@ namespace AccountProvider.Functions
                                 // send verification code
                                 //change so it works with my verificationprovider
                                 //om du vill kora det som en HTTP REQUEST - kraver att vi vantar pa svar tillbaka
-                                try
-                                {
-                                    //using var http = new HttpClient();
-                                    //StringContent content = new StringContent(JsonConvert.SerializeObject(new { Email = userAccount.Email }), Encoding.UTF8, "application/json");
-                                    //var response = await http.PostAsync("https://verificationprovider-silicon-win23-annaozmehak.azurewebsites.net/api/GenerateVerificationCode", content);
+                                //try
+                                //{
+                                //    //using var http = new HttpClient();
+                                //    //StringContent content = new StringContent(JsonConvert.SerializeObject(new { Email = userAccount.Email }), Encoding.UTF8, "application/json");
+                                //    //var response = await http.PostAsync("https://verificationprovider-silicon-win23-annaozmehak.azurewebsites.net/api/GenerateVerificationCode", content);
 
-                                    var verificationRequest = new VerificationRequest { Email = userAccount.Email };
-                                    var message = new ServiceBusMessage(JsonConvert.SerializeObject(verificationRequest));
-                                    var sender = _serviceBusClient.CreateSender("verification_request");
-                                    await sender.SendMessageAsync(message);
+                                //    var verificationRequest = new VerificationRequest { Email = userAccount.Email };
+                                //    var message = new ServiceBusMessage(JsonConvert.SerializeObject(verificationRequest));
+                                //    var sender = _serviceBusClient.CreateSender("verification_request");
+                                //    await sender.SendMessageAsync(message);
 
-                                }
-                                catch (Exception ex)
-                                {
-                                    _logger.LogError($"_serviceBusClient.SendMessageAsync :: {ex.Message}");
-                                }
+                                //}
+                                //catch (Exception ex)
+                                //{
+                                //    _logger.LogError($"_serviceBusClient.SendMessageAsync :: {ex.Message}");
+                                //}
 
                                 return new OkResult();
                             }

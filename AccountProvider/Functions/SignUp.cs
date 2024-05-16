@@ -50,8 +50,8 @@ namespace AccountProvider.Functions
                     {
                         var userAccount = new UserAccount
                         {
-                            FirstName = urr.Email,
-                            LastName = urr.Password,
+                            FirstName = urr.FirstName,
+                            LastName = urr.LastName,
                             Email = urr.Email,
                             UserName = urr.Email
                         };

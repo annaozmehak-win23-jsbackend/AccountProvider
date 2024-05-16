@@ -10,9 +10,6 @@
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/sqldatabase_silicon_win23_annaozmehak.database.windows.net/silicon_database/SqlAdmin/SqlTable/dbo.AspNetUsers.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/sqldatabase_silicon_win23_annaozmehak.database.windows.net/silicon_database/SqlAdmin/SqlTable/dbo.VerificationRequests.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{06C96C20-DEB4-4499-AA64-9A26E9BF9702}|AccountProvider\\AccountProvider.csproj|c:\\users\\anna\\documents\\repos\\accountprovider\\accountprovider\\local.settings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{06C96C20-DEB4-4499-AA64-9A26E9BF9702}|AccountProvider\\AccountProvider.csproj|solutionrelative:accountprovider\\local.settings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
@@ -28,20 +25,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 190,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "dbo.VerificationRequests [Data]",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/sqldatabase_silicon_win23_annaozmehak.database.windows.net/silicon_database/SqlAdmin/SqlTable/dbo.VerificationRequests.sql",
-              "ToolTip": "dbo.VerificationRequests [Data]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2024-05-16T09:52:17.377Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "local.settings.json",
               "DocumentMoniker": "C:\\Users\\Anna\\Documents\\Repos\\AccountProvider\\AccountProvider\\local.settings.json",
               "RelativeDocumentMoniker": "AccountProvider\\local.settings.json",
@@ -49,7 +37,8 @@
               "RelativeToolTip": "AccountProvider\\local.settings.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-05-14T15:18:50.887Z"
+              "WhenOpened": "2024-05-14T15:18:50.887Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -69,14 +58,14 @@
               "RelativeDocumentMoniker": "AccountProvider\\Functions\\SignUp.cs",
               "ToolTip": "C:\\Users\\Anna\\Documents\\Repos\\AccountProvider\\AccountProvider\\Functions\\SignUp.cs",
               "RelativeToolTip": "AccountProvider\\Functions\\SignUp.cs",
-              "ViewState": "AQIAACIAAAAAAAAAAAAQwDcAAAAwAAAA",
+              "ViewState": "AQIAAC4AAAAAAAAAAAAQwEgAAAA0AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-14T10:42:57.759Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "Verify.cs",
               "DocumentMoniker": "C:\\Users\\Anna\\Documents\\Repos\\AccountProvider\\AccountProvider\\Functions\\Verify.cs",
               "RelativeDocumentMoniker": "AccountProvider\\Functions\\Verify.cs",

@@ -20,7 +20,7 @@ public class SignIn(ILogger<SignIn> logger, SignInManager<UserAccount> signInMan
     [Function("SignIn")]
     public async Task<IActionResult> Run([HttpTrigger(AuthorizationLevel.Function, "post")] HttpRequest req)
     {
-        string body = null!;
+        string body;
 
         try
         {
@@ -29,11 +29,13 @@ public class SignIn(ILogger<SignIn> logger, SignInManager<UserAccount> signInMan
         catch (Exception ex)
         {
             _logger.LogError($"StreamReader :: {ex.Message}");
+            return new StatusCodeResult(StatusCodes.Status500InternalServerError);
         }
 
-        if (body != null)
-        {
-            UserLoginRequest ulr = null!;
+        UserLoginRequest ulr;
+        //if (body != null)
+        //{
+            
 
             try
             {
@@ -42,19 +44,20 @@ public class SignIn(ILogger<SignIn> logger, SignInManager<UserAccount> signInMan
             catch (Exception ex)
             {
                 _logger.LogError($"JsonConvert.DeserializeObject<UserLoginRequest> :: {ex.Message}");
+                return new BadRequestResult();
             }
 
             if (ulr != null && !string.IsNullOrEmpty(ulr.Email) && !string.IsNullOrEmpty(ulr.Password))
             {
                 try
                 {
-                    var userAccount = await _userManager.FindByEmailAsync(ulr.Email);
-                    var result = await _signInManager.CheckPasswordSignInAsync(userAccount!, ulr.Password, false);
+                    //var userAccount = await _userManager.FindByEmailAsync(ulr.Email);
+                    var result = await _signInManager.PasswordSignInAsync(ulr.Email, ulr.Password, isPersistent: false, lockoutOnFailure: false);
                     if (result.Succeeded)
                     {
                         //Get token from TokenProvider
 
-                        return new OkObjectResult("accesstoken");
+                        return new OkResult();
                     }
 
                     return new UnauthorizedResult();
@@ -62,9 +65,10 @@ public class SignIn(ILogger<SignIn> logger, SignInManager<UserAccount> signInMan
                 catch (Exception ex)
                 {
                     _logger.LogError($"await _signInManager.PasswordSignInAsync :: {ex.Message}");
+                    return new StatusCodeResult(StatusCodes.Status500InternalServerError);
                 }
             }
-        }
+        //}
 
         return new BadRequestResult();
     }

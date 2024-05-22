@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\Anna\\Documents\\Repos\\AccountProvider\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{06C96C20-DEB4-4499-AA64-9A26E9BF9702}|AccountProvider\\AccountProvider.csproj|c:\\users\\anna\\documents\\repos\\accountprovider\\accountprovider\\functions\\deletecustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06C96C20-DEB4-4499-AA64-9A26E9BF9702}|AccountProvider\\AccountProvider.csproj|solutionrelative:accountprovider\\functions\\deletecustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{06C96C20-DEB4-4499-AA64-9A26E9BF9702}|AccountProvider\\AccountProvider.csproj|c:\\users\\anna\\documents\\repos\\accountprovider\\accountprovider\\functions\\customers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{06C96C20-DEB4-4499-AA64-9A26E9BF9702}|AccountProvider\\AccountProvider.csproj|solutionrelative:accountprovider\\functions\\customers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -19,6 +23,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "DeleteCustomer.cs",
+              "DocumentMoniker": "C:\\Users\\Anna\\Documents\\Repos\\AccountProvider\\AccountProvider\\Functions\\DeleteCustomer.cs",
+              "RelativeDocumentMoniker": "AccountProvider\\Functions\\DeleteCustomer.cs",
+              "ToolTip": "C:\\Users\\Anna\\Documents\\Repos\\AccountProvider\\AccountProvider\\Functions\\DeleteCustomer.cs",
+              "RelativeToolTip": "AccountProvider\\Functions\\DeleteCustomer.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAqwBcAAAALAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-22T10:23:11.374Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Customers.cs",
               "DocumentMoniker": "C:\\Users\\Anna\\Documents\\Repos\\AccountProvider\\AccountProvider\\Functions\\Customers.cs",
               "RelativeDocumentMoniker": "AccountProvider\\Functions\\Customers.cs",

@@ -13,3 +13,7 @@ C:\Users\Anna\Documents\Repos\AccountProvider\Data\obj\Debug\net8.0\refint\Data.
 C:\Users\Anna\Documents\Repos\AccountProvider\Data\obj\Debug\net8.0\Data.pdb
 C:\Users\Anna\Documents\Repos\AccountProvider\Data\obj\Debug\net8.0\Data.genruntimeconfig.cache
 C:\Users\Anna\Documents\Repos\AccountProvider\Data\obj\Debug\net8.0\ref\Data.dll
+C:\Users\Anna\Documents\Repos\AccountProvider\AccountProvider\bin\output\Data.deps.json
+C:\Users\Anna\Documents\Repos\AccountProvider\AccountProvider\bin\output\Data.runtimeconfig.json
+C:\Users\Anna\Documents\Repos\AccountProvider\AccountProvider\bin\output\Data.dll
+C:\Users\Anna\Documents\Repos\AccountProvider\AccountProvider\bin\output\Data.pdb

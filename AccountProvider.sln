@@ -5,7 +5,7 @@ VisualStudioVersion = 17.9.34714.143
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AccountProvider", "AccountProvider\AccountProvider.csproj", "{06C96C20-DEB4-4499-AA64-9A26E9BF9702}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", "{EB9E08F4-14D9-498C-B311-175D2642968A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data", "Data\Data.csproj", "{EB9E08F4-14D9-498C-B311-175D2642968A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

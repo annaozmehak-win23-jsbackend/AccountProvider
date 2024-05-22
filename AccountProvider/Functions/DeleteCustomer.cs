@@ -19,11 +19,11 @@ public class DeleteCustomer(ILogger<DeleteCustomer> logger, DataContext context,
     [Function("DeleteCustomer")]
     public async Task<IActionResult> Run([HttpTrigger(AuthorizationLevel.Function, "post")] HttpRequest req)
     {
-        string userId = req.Query["userId"]!;
+        string userId = req.Query["id"]!;
 
         try
         {
-            var user = await _userManager.FindByIdAsync(userId!);
+            var user = await _userManager.FindByIdAsync(userId);
             if (user == null)
             {
                 return new NotFoundObjectResult($"User with ID = {userId} cannot be found");

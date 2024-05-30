@@ -3,7 +3,6 @@ using Data.Entities;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Azure.Functions.Worker;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
@@ -13,9 +12,9 @@ var host = new HostBuilder()
     {
         services.AddApplicationInsightsTelemetryWorkerService();
         services.ConfigureFunctionsApplicationInsights();
-        
-        services.AddDbContext<DataContext>(x => x.UseSqlServer(context.Configuration.GetConnectionString("SiliconDatabase")));
-        
+
+        services.AddDbContext<DataContext>(x => x.UseSqlServer(Environment.GetEnvironmentVariable("SiliconDatabase")));
+
         services.AddIdentity<UserAccount, IdentityRole>(x =>
         {
             x.SignIn.RequireConfirmedAccount = true;

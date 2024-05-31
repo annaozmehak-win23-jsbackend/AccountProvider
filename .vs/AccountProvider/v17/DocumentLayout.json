@@ -3,22 +3,19 @@
   "WorkspaceRootPath": "C:\\Users\\Anna\\Documents\\Repos\\AccountProvider\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{06C96C20-DEB4-4499-AA64-9A26E9BF9702}|AccountProvider\\AccountProvider.csproj|c:\\users\\anna\\documents\\repos\\accountprovider\\accountprovider\\functions\\verify.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{06C96C20-DEB4-4499-AA64-9A26E9BF9702}|AccountProvider\\AccountProvider.csproj|solutionrelative:accountprovider\\functions\\verify.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{06C96C20-DEB4-4499-AA64-9A26E9BF9702}|AccountProvider\\AccountProvider.csproj|c:\\users\\anna\\documents\\repos\\accountprovider\\accountprovider\\functions\\signin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{06C96C20-DEB4-4499-AA64-9A26E9BF9702}|AccountProvider\\AccountProvider.csproj|solutionrelative:accountprovider\\functions\\signin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/sqldatabase_silicon_win23_annaozmehak.database.windows.net/silicon_database/SqlAdmin/SqlTable/dbo.AspNetUsers.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{06C96C20-DEB4-4499-AA64-9A26E9BF9702}|AccountProvider\\AccountProvider.csproj|c:\\users\\anna\\documents\\repos\\accountprovider\\accountprovider\\functions\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{06C96C20-DEB4-4499-AA64-9A26E9BF9702}|AccountProvider\\AccountProvider.csproj|solutionrelative:accountprovider\\functions\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/sqldatabase_silicon_win23_annaozmehak.database.windows.net/silicon_database/SqlAdmin/SqlTable/dbo.AspNetUsers.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/sqldatabase_silicon_win23_annaozmehak.database.windows.net/silicon_database/SqlAdmin/SqlTable/dbo.VerificationRequests.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+      "AbsoluteMoniker": "D:0:0:{06C96C20-DEB4-4499-AA64-9A26E9BF9702}|AccountProvider\\AccountProvider.csproj|c:\\users\\anna\\documents\\repos\\accountprovider\\accountprovider\\functions\\verify.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06C96C20-DEB4-4499-AA64-9A26E9BF9702}|AccountProvider\\AccountProvider.csproj|solutionrelative:accountprovider\\functions\\verify.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{06C96C20-DEB4-4499-AA64-9A26E9BF9702}|AccountProvider\\AccountProvider.csproj|c:\\users\\anna\\documents\\repos\\accountprovider\\accountprovider\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -32,33 +29,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 290,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "dbo.VerificationRequests [Data]",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/sqldatabase_silicon_win23_annaozmehak.database.windows.net/silicon_database/SqlAdmin/SqlTable/dbo.VerificationRequests.sql",
-              "ToolTip": "dbo.VerificationRequests [Data]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2024-05-31T10:51:25.953Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "Verify.cs",
               "DocumentMoniker": "C:\\Users\\Anna\\Documents\\Repos\\AccountProvider\\AccountProvider\\Functions\\Verify.cs",
               "RelativeDocumentMoniker": "AccountProvider\\Functions\\Verify.cs",
               "ToolTip": "C:\\Users\\Anna\\Documents\\Repos\\AccountProvider\\AccountProvider\\Functions\\Verify.cs",
               "RelativeToolTip": "AccountProvider\\Functions\\Verify.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAC8AAAA5AAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-31T10:20:59.737Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "dbo.AspNetUsers [Data]",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/sqldatabase_silicon_win23_annaozmehak.database.windows.net/silicon_database/SqlAdmin/SqlTable/dbo.AspNetUsers.sql",
               "ToolTip": "dbo.AspNetUsers [Data]",
@@ -81,20 +69,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "SignIn.cs",
               "DocumentMoniker": "C:\\Users\\Anna\\Documents\\Repos\\AccountProvider\\AccountProvider\\Functions\\SignIn.cs",
               "RelativeDocumentMoniker": "AccountProvider\\Functions\\SignIn.cs",
               "ToolTip": "C:\\Users\\Anna\\Documents\\Repos\\AccountProvider\\AccountProvider\\Functions\\SignIn.cs",
               "RelativeToolTip": "AccountProvider\\Functions\\SignIn.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
+              "ViewState": "AQIAACMAAAAAAAAAAAAIwDYAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-30T11:18:37.044Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Anna\\Documents\\Repos\\AccountProvider\\AccountProvider\\Program.cs",
               "RelativeDocumentMoniker": "AccountProvider\\Program.cs",

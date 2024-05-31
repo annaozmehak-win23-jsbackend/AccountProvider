@@ -47,7 +47,23 @@ public class SignIn(ILogger<SignIn> logger, SignInManager<UserAccount> signInMan
          {
             try
             {
+                var user = await _userManager.FindByEmailAsync(ulr.Email);
+                if (user == null)
+                {
+                    _logger.LogError($"No user found with email: {ulr.Email}");
+                    return new UnauthorizedResult();
+                }
+
+                var isPasswordValid = await _userManager.CheckPasswordAsync(user, ulr.Password);
+                if (!isPasswordValid)
+                {
+                    _logger.LogError($"Invalid password for user: {ulr.Email}");
+                    return new UnauthorizedResult();
+                }
+
+                _logger.LogInformation($"Attempting to sign in user: {ulr.Email}");
                 var result = await _signInManager.PasswordSignInAsync(ulr.Email, ulr.Password, isPersistent: false, lockoutOnFailure: false);
+                _logger.LogInformation($"Sign in result: {result.Succeeded}");
                 if (result.Succeeded)
                 {
                     return new OkResult();

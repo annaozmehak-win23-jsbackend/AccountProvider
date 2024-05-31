@@ -66,22 +66,6 @@ public class Verify(ILogger<Verify> logger, UserManager<UserAccount> userManager
                             }
                         }
                     }
-
-                    //simulated, remove true on real connection like above
-                    //if (true)
-                    //{
-                    //    var userAccount = await _userManager.FindByEmailAsync(vr.Email);
-                    //    if (userAccount != null)
-                    //    {
-                    //        userAccount.EmailConfirmed = true;
-                    //        await _userManager.UpdateAsync(userAccount);
-
-                    //        if (await _userManager.IsEmailConfirmedAsync(userAccount))
-                    //        {
-                    //            return new OkResult();
-                    //        }
-                    //    }
-                    //}
                 }
                 catch (Exception ex)
                 {

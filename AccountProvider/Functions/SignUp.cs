@@ -68,14 +68,15 @@ namespace AccountProvider.Functions
                                 //om du vill kora det som en HTTP REQUEST - kraver att vi vantar pa svar tillbaka
                                 try
                                 {
-                                    //using var http = new HttpClient();
-                                    //StringContent content = new StringContent(JsonConvert.SerializeObject(new { Email = userAccount.Email }), Encoding.UTF8, "application/json");
-                                    //var response = await http.PostAsync("https://verificationprovider-silicon-win23-annaozmehak.azurewebsites.net/api/GenerateVerificationCode", content);
-
+                                    using var httpClient = new HttpClient();
                                     var verificationRequest = new VerificationRequest { Email = userAccount.Email };
-                                    var message = new ServiceBusMessage(JsonConvert.SerializeObject(verificationRequest));
-                                    var sender = _serviceBusClient.CreateSender("verification_request");
-                                    await sender.SendMessageAsync(message);
+                                    var content = new StringContent(JsonConvert.SerializeObject(verificationRequest), Encoding.UTF8, "application/json");
+                                    var response = await httpClient.PostAsync("https://verificationprovider-silicon-win23-annaozmehak.azurewebsites.net/api/GenerateVerification?code=3ugSBTSCiIsB6iOzn8zTD4Y45nNZ0XEiSmG2dK4XT7sOAzFuQYz9nA%3D%3D", content);
+
+                                    //var verificationRequest = new VerificationRequest { Email = userAccount.Email };
+                                    //var message = new ServiceBusMessage(JsonConvert.SerializeObject(verificationRequest));
+                                    //var sender = _serviceBusClient.CreateSender("verification_request");
+                                    //await sender.SendMessageAsync(message);
 
                                 }
                                 catch (Exception ex)
